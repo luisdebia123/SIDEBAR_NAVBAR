@@ -1,0 +1,144 @@
+*, *:after, *:before{
+    box-sizing: border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.blue{
+    background: #2512d5;/* color de fondo Navbar */
+    color: #50e929; 
+}
+
+.navbar{
+    padding: 5px 2%;
+}
+
+
+
+#logo {
+    display: inline-block;
+    margin-top: 1px; /*ancho del navbar*/
+    color: rgb(238, 227, 227);/* color de texto navbar*/
+}
+
+/*LogOut-ContactUs*/
+#link {
+    color :rgb(238, 230, 230);/* color de las letras*/
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+i {
+    margin: 0 7px; /* separación iconos verticales*/
+}
+
+/*hamburguesa*/
+#sidebarCollapse{
+    color: rgb(245, 239, 239); /*color de las rayitas permanente*/
+    background: #622afc;/* color de fondo*/
+    outline: none;
+    margin: 0 50px; 
+}
+
+/*hamburguesa*/
+#sidebarCollapse:hover{
+    color: rgba(212, 16, 16, 0.981);/* color de las rayitas cuando se toca con el mouse*/
+    background: rgb(209, 147, 13);/* color de fondo cuando se toca con el mouse*/
+    outline: none;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    margin-top: 69px;
+    background: rgba(75, 3, 27, 0.864);/* color de fondo lista de iconos verticales  */
+    color: rgb(236, 219, 219);/*color de letras de UserName*/
+    transition: all 0.3s;
+}
+
+#sidebar.active{
+    margin-left: -250px;
+}
+
+/*color de fondo Username*/
+#sidebar .sidebar-header{
+    padding: 20px;
+    background: #dd0e8e;
+}
+
+#sidebar ul.components{
+    padding: 20px 0px;/*separacion vertical del UserName ce iconos*/
+}
+
+#sidebar ul p{
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a{
+    padding: 10px 10px 10px 20px;/*separacion de lo iconos veticales hacia la derecha*/
+    color: #ebf2f2f1;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li.active>a,
+[aria-expanded="true"]{
+    color: #fff;
+    background-color: #8a5fff;
+}
+
+a[data-toggle="collapse"]{
+    position: relative;
+}
+
+.dropdown-toggle::after{
+    display: block;
+    position: absolute;
+    top:50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#content {
+    width: 100%;
+    padding: 40px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    margin-top: 70px;
+}
+
+@media (max-width:800px){
+    #sidebar{
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0px;
+    }
+    #sidebarCollapse span{
+        display: none;
+    }
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width:400px){
+    #sidebar {
+        margin-top: -20px;
+    }
+    #logo {
+        display: none;
+    }
+}
+
+
+
+
